@@ -6,6 +6,19 @@ Shell 是指一种应用程序，这个应用程序提供了一个界面，用�
 
 Ken Thompson 的 sh 是第一种 Unix Shell，Windows Explorer 是一个典型的图形界面 Shell。
 
+## 目录
+
+* [Shell 简介](#shell-简介)
+  * [Shell 脚本](#shell-脚本)
+  * [Shell 环境](#shell-环境)
+  * [第一个shell脚本](#第一个shell脚本)
+  * [实例](#实例)
+    * [运行 Shell 脚本的两种方法](#运行-shell-脚本的两种方法)
+      * [1、作为可执行程序](#1、作为可执行程序)
+      * [2、作为解释器参数](#2、作为解释器参数)
+
+--------
+
 ## Shell 脚本
 
 Shell 脚本（shell script），是一种为 shell 编写的脚本程序。
