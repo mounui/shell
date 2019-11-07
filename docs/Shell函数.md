@@ -2,31 +2,29 @@
 
 linux shell 可以用户定义函数，然后在shell脚本中可以随便调用。
 
+## 函数定义
+
 shell中函数的定义格式如下：
 
-```
+```shell
 [ function ] funname [()]
-
 {
-
     action;
-
     [return int;]
-
 }
 ```
 
 说明：
 
 - 1、可以带function fun() 定义，也可以直接fun() 定义,不带任何参数。
-- 2、参数返回，可以显示加：return 返回，如果不加，将以最后一条命令运行结果，作为返回值。 return后跟数值n(0-255
+- 2、参数返回，可以显示加：return 返回，如果不加，将以最后一条命令运行结果，作为返回值。 return后跟数值n(0-255)
 
 下面的例子定义了一个函数并进行调用：
 
-```
+```shell
 #!/bin/bash
-# author:菜鸟教程
-# url:www.runoob.com
+# author:mounui
+# url:mounui.com
 
 demoFun(){
     echo "这是我的第一个 shell 函数!"
@@ -38,7 +36,7 @@ echo "-----函数执行完毕-----"
 
 输出结果：
 
-```
+```shell
 -----函数开始执行-----
 这是我的第一个 shell 函数!
 -----函数执行完毕-----
@@ -46,10 +44,10 @@ echo "-----函数执行完毕-----"
 
 下面定义一个带有return语句的函数：
 
-```
+```shell
 #!/bin/bash
-# author:菜鸟教程
-# url:www.runoob.com
+# author:mounui
+# url:mounui.com
 
 funWithReturn(){
     echo "这个函数会对输入的两个数字进行相加运算..."
@@ -66,7 +64,7 @@ echo "输入的两个数字之和为 $? !"
 
 输出类似下面：
 
-```
+```shell
 这个函数会对输入的两个数字进行相加运算...
 输入第一个数字: 
 1
@@ -88,10 +86,10 @@ echo "输入的两个数字之和为 $? !"
 
 带参数的函数示例：
 
-```
+```shell
 #!/bin/bash
-# author:菜鸟教程
-# url:www.runoob.com
+# author:mounui
+# url:mounui.com
 
 funWithParam(){
     echo "第一个参数为 $1 !"
@@ -107,7 +105,7 @@ funWithParam 1 2 3 4 5 6 7 8 9 34 73
 
 输出结果：
 
-```
+```shell
 第一个参数为 1 !
 第二个参数为 2 !
 第十个参数为 10 !
@@ -117,7 +115,7 @@ funWithParam 1 2 3 4 5 6 7 8 9 34 73
 作为一个字符串输出所有参数 1 2 3 4 5 6 7 8 9 34 73 !
 ```
 
-注意，$10 不能获取第十个参数，获取第十个参数需要${10}。当n>=10时，需要使用${n}来获取参数。
+**注意**：$10 不能获取第十个参数，获取第十个参数需要`${10}`。当n>=10时，需要使用`${n}`来获取参数。
 
 另外，还有几个特殊字符用来处理参数：
 
